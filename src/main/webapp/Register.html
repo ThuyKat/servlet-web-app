@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+<!-- <script type="text/javascript">
+window.addEventListener('load',function(){
+	console.log("hello")
+	var uname= document.getElementById("username")
+	console.log(uname)
+} -->
+<!-- </script> -->
+</head>
+
+<body>
+    <h1>Register form</h1>
+    <form action="/be6-web/confirm.jsp" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        <label>Hobbies:</label><br>
+        <input type="checkbox" id="music" name="hobbies" value="music" checked>
+        <label for="music">Music</label><br>
+        <input type="checkbox" id="sport" name="hobbies" value="sport" checked>
+        <label for="sport">Sport</label><br>
+        <input type="checkbox" id="reading" name="hobbies" value="reading" checked>
+        <label for="reading">Reading</label><br><br>
+
+        <label for="city">City:</label><br>
+        <select id="city" name="city">
+            <option value="tphcm">TPHCM</option>
+            <option value="hn">HN</option>
+            <option value="others">Others</option>
+        </select><br><br>
+
+        <input type =submit value=submit > 
+        
+    </form>
+</body>
+</html>
