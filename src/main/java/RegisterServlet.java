@@ -79,25 +79,4 @@ public class RegisterServlet extends HttpServlet {
 
 	}
 
-	private Connection getDatabaseConnection() {
-		Connection connection = null;
-		try {
-			connection = getDatabaseConnection();
-			String dbName = "JDBC_be6";
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/", "root", "root");
-			System.out.println("DB is connected");
-			connection.createStatement().executeUpdate("create database if not exists " + dbName + ";");
-			System.out.println("record is created");
-			connection.close();
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + dbName, "root", "root");
-			connection.createStatement()
-					.executeUpdate("create table if not exists users( " + "id int auto_increment primary key,"
-							+ " username varchar(50) ," + " password varchar(100) ," + " gender varchar(20),"
-							+ " hobbies varchar(100)," + "city varchar(50));");
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return connection;
-	}
 }
