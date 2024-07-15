@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String password= request.getParameter("password");
 		
-		//check if userId and password are valid
+		//check if username and password are valid
 		boolean result = false;
 		try {
 			result = authenticate(username, password);
