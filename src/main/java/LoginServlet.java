@@ -74,8 +74,8 @@ public class LoginServlet extends HttpServlet {
 	}
 
 	private boolean authenticate(String username, String password) throws SQLException {
-		//retrieve userId + password from the database
-		// compare with the userId and password provided
+		//retrieve username + password from the database
+		// compare with the username and password provided
 		User userDB = getUserByUsername(username);
 		String usernameDB = userDB.getUserName();
 		String passwordDB = userDB.getPassword();
